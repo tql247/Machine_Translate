@@ -144,3 +144,10 @@ print("Test")
 # translation, attention = translate_sentence(src, SRC, TRG, model, device)
 
 # print(f'predicted trg = {translation}')
+
+# TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True,fix_length=200,batch_first=True)
+# with open("model/TEXT.Field","wb")as f:
+#      dill.dump(TEXT,f)
+
+# with open("model/TEXT.Field","rb")as f:
+#      TEXT=dill.load(f)
