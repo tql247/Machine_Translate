@@ -15,7 +15,7 @@ import math
 import time
 
 from tokenizer import tokenize_en, tokenize_vi
-from models import Decoder, Encoder, MultiHeadAttentionLayer, PositionwiseFeedforwardLayer, Seq2Seq
+from models import Decoder, Encoder, Seq2Seq, MultiHeadAttentionLayer, PositionwiseFeedforwardLayer, Seq2Seq
 from utils import count_parameters, train, evaluate, epoch_time
 
 
@@ -44,7 +44,7 @@ TRG = Field(tokenize = tokenize_vi,
             batch_first = True)
 
 
-train_data, valid_data, test_data = TranslationDataset.splits(path="/content/drive/My Drive/data",
+train_data, valid_data, test_data = TranslationDataset.splits(path="/data",
                                                               exts = ('.en', '.vi'),
                                                               fields = (SRC, TRG),
                                                               train='train', validation='val', test='test')
